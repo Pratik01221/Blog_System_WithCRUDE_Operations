@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from blogs.models import Category,Blog
 from Core_features.models import About  
+from .forms import UserRegisterForm
 
 
 def home(request):
@@ -12,9 +13,7 @@ def home(request):
     try:
         about= About.objects.get()
     except:
-        about = None
-
-    
+        about = None   
 
     context = {
         
@@ -24,3 +23,9 @@ def home(request):
 
     }
     return render(request,'home.html',context)
+
+def register(request):
+    form = UserRegisterForm()
+    context = {'form': form}
+
+    return render(request, 'register.html', context)

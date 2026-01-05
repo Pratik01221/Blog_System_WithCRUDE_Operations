@@ -26,7 +26,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('category/', include('blogs.urls')),
-    path('<slug:slug>/',blogsviews.blogs , name='blogs'),
-    # search endpoint
+
+    # ✅ search BEFORE slug
     path('blogs/search/', blogsviews.search, name='search'),
-]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    path('blogs/<slug:slug>/', blogsviews.blogs, name='blogs'),
+
+    path('register/', views.register, name='register'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
