@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <!-- Left Sidebar -->
+    <div class="col-md-3">
+        <div class="nav flex-column nav-pills bg-light" aria-orientation="vertical">
+            <a href="#" class="nav-link text-dark bg-warning">Dashboard</a>
+            <a href="#" class="nav-link text-dark">Posts</a>
+            <a href="#" class="nav-link text-dark">Categories</a>
+            <a href="#" class="nav-link text-dark">Users</a>
+            <a href="#" class="nav-link text-dark">Logout</a>
+        </div>
+    </div>
+
+    <!-- Right Content -->
+    <div class="col-md-9">
+        <div class="row">
+            
+            <!-- Categories Card -->
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <div class="card-header text-uppercase font-weight-bold">
+                        All Categories
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ Category_count }}</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Posts Card -->
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <div class="card-header text-uppercase font-weight-bold">
+                        All Posts
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ blogs_count }}</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
