@@ -32,7 +32,7 @@
                     <td>
                         <a href="{% url 'edit_category' cat.id %}"><i class='fa fa-edit text-success' style='font-size:24px'></i></a>
                         &nbsp;&nbsp;
-                        <a href=""><i class="fa fa-trash-o text-danger" style="font-size:24px"></i></a>
+                        <a href="{% url 'delete_category' cat.id %}"><i class="fa fa-trash-o text-danger" style="font-size:24px"></i></a>
                     </td>
                 </tr>
             {% endfor%}
