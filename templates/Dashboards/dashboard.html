@@ -4,18 +4,12 @@
 
 <div class="row">
     <!-- Left Sidebar -->
-    <div class="col-md-3">
-        <div class="nav flex-column nav-pills bg-light" aria-orientation="vertical">
-            <a href="#" class="nav-link text-dark bg-warning">Dashboard</a>
-            <a href="#" class="nav-link text-dark">Posts</a>
-            <a href="#" class="nav-link text-dark">Categories</a>
-            <a href="#" class="nav-link text-dark">Users</a>
-            <a href="#" class="nav-link text-dark">Logout</a>
-        </div>
-    </div>
+    <!-- load sidebar here -->
+    {% include 'Dashboards/sidebar.html' %}
 
     <!-- Right Content -->
     <div class="col-md-9">
+        <samp>login as: <b>{{ user.username }}</b></samp>
         <div class="row">
             
             <!-- Categories Card -->
