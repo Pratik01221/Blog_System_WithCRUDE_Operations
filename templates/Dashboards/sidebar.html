@@ -11,8 +11,8 @@
            Categories
         </a>
 
-        <a href="#" class="nav-link text-dark">Posts</a>
-        <a href="#" class="nav-link text-dark">Logout</a>
+        <a href="{% url 'posts' %}" class="nav-link text-dark {% if request.path == '/dashboard/posts/' %}bg-warning{% endif %}">Posts</a>
+        <a href="{% url 'logout' %}" class="nav-link text-dark {% if request.path == '/logout/' %}bg-warning{% endif %}">Logout</a>
 
     </div>
 </div>
